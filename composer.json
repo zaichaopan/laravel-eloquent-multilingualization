@@ -1,0 +1,29 @@
+{
+    "name": "zai/laravel-eloquent-multilingualization",
+    "description": "Add multilingual support to laravel eloquent models",
+    "authors": [
+        {
+            "name": "Zai chao Pan",
+            "email": "zaichaopan@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/contracts": "5.4.*|5.5.*"
+    },
+    "require-dev": {
+    "orchestra/testbench": "~3.4.0",
+    "orchestra/database": "~3.4.0",
+    "phpunit/phpunit": "~6.0",
+    "mockery/mockery": "0.9.*"
+  },
+
+    "autoload": {
+    "psr-4": {
+      "Zai\\Translate\\": "src/"
+    },
+    "classmap": [
+      "tests"
+    ]
+  },
+   "minimum-stability": "dev"
+}
