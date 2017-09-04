@@ -56,20 +56,20 @@ class TranslatableTest extends TestBase
 
         app()->setLocale($this->translationAttributesWithValidKeys['locale']);
 
-        $this->assertEquals('Bonjour', $this->article->translation['title']);
-        $this->assertEquals('Laravel est génial!', $this->article->translation['body']);
+        $this->assertEquals('Bonjour', $this->article->translation->title);
+        $this->assertEquals('Laravel est génial!', $this->article->translation->body);
     }
 
     public function test_can_show_default_value_when_no_translation_exists()
     {
         $this->assertCount(0, $this->article->translations);
-        $this->assertEquals('Hello world', $this->article->translation['title']);
-        $this->assertEquals('Laravel is awesome!', $this->article->translation['body']);
+        $this->assertEquals('Hello world', $this->article->translation->title);
+        $this->assertEquals('Laravel is awesome!', $this->article->translation->body);
 
         app()->setLocale('fr');
 
-        $this->assertEquals('Hello world', $this->article->translation['title']);
-        $this->assertEquals('Laravel is awesome!', $this->article->translation['body']);
+        $this->assertEquals('Hello world', $this->article->translation->title);
+        $this->assertEquals('Laravel is awesome!', $this->article->translation->body);
     }
 
     public function test_only_translatables_keys_are_added()
@@ -87,7 +87,7 @@ class TranslatableTest extends TestBase
 
         app()->setLocale('fr');
         $this->assertTrue(array_key_exists('body', $this->article->translation));
-        $this->assertEquals('', $this->article->translation['body']);
+        $this->assertEquals('', $this->article->translation->body);
     }
 
     /**
@@ -106,8 +106,8 @@ class TranslatableTest extends TestBase
         app()->setLocale('fr');
 
         $this->assertCount(1, $this->article->fresh()->translations);
-        $this->assertEquals('new title', $this->article->translation['title']);
-        $this->assertEquals('new body', $this->article->translation['body']);
+        $this->assertEquals('new title', $this->article->translation->title);
+        $this->assertEquals('new body', $this->article->translation->body);
     }
 
     public function test_can_update_an_existing_translation()
@@ -125,8 +125,8 @@ class TranslatableTest extends TestBase
         app()->setLocale('fr');
 
         $this->assertCount(1, $this->article->fresh()->translations);
-        $this->assertEquals('new title', $this->article->translation['title']);
-        $this->assertEquals('new body', $this->article->translation['body']);
+        $this->assertEquals('new title', $this->article->translation->title);
+        $this->assertEquals('new body', $this->article->translation->body);
     }
 
     public function test_update_none_existing_translation_will_create_a_new_translation()
