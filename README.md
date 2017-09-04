@@ -60,7 +60,7 @@ protected $translatables = [
 
 ### Add Translation
 
-Using method: **addTranslation**. It takes an **associate** array as parameter. Simply put the translation data in the array, including which **language** it is using key **locale**.
+Using method: **addTranslation**. It takes an **associative** array as parameter. Simply put the translation data in the array, including which **language** it is using key **locale**.
 
 ```php
 // create a new article
@@ -129,7 +129,7 @@ $article->translation->body;  // the out is laravel is awesome!
 
 ### Update translation
 
-Using method: **updateTranslation**. It takes an **associate array** as parameter. Simply put the updated translation data in the array, including which **language** it is.
+Using method: **updateTranslation**. It takes an **associative array** as parameter. Simply put the updated translation data in the array, including which **language** it is.
 
 ``` php
 // add translation to the article
