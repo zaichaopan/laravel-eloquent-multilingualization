@@ -30,6 +30,6 @@
             "Zai\\Translate\\TranslationServiceProvider"
         ]
     }
-}
+  },
    "minimum-stability": "dev"
 }
