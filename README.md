@@ -32,7 +32,7 @@ php artisan migrate
 
 ## Usage
 
-## Use Translatable trait in the model you want to translate
+### Use Translatable trait in the model you want to translate
 
 Let's say the model is called Article. In the Article model
 
@@ -47,7 +47,7 @@ class Article extends Model
 }
 ```
 
-## Define translatables property in the model
+### Define translatables property in the model
 
 Take the same Article model as example. We want to translate title and body of an article
 
@@ -58,7 +58,7 @@ protected $translatables = [
 ];
 ```
 
-## Add Translation
+### Add Translation
 
 Using method: **addTranslation**. It takes an **associate** array as parameter. Simply put the translation data in the array, including which **language** it is using key **locale**.
 
