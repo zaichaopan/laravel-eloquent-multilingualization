@@ -1,6 +1,7 @@
 {
     "name": "zai/laravel-eloquent-multilingualization",
     "description": "Add multilingual support to laravel eloquent models",
+    "license": "MIT",
     "authors": [
         {
             "name": "Zai chao Pan",
