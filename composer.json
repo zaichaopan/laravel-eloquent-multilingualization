@@ -24,5 +24,12 @@
             "tests"
         ]
   },
+  "extra": {
+    "laravel": {
+        "providers": [
+            "Zai\\Translate\\TranslationServiceProvider"
+        ]
+    }
+}
    "minimum-stability": "dev"
 }
